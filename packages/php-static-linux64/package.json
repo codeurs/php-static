@@ -1,0 +1,9 @@
+{
+  "name": "php-static-linux64",
+  "version": "0.0.0",
+  "os" : ["darwin", "linux"],
+  "bin": {
+    "php" : "./php",
+    "php-fpm" : "./php-fpm"
+  }
+}
