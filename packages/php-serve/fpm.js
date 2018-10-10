@@ -64,7 +64,6 @@ module.exports = function(options, resolver) {
         ([script, php]) =>
           new Promise(function(resolve, reject) {
             const headers = getHeaders(req, options.documentRoot, script)
-            console.log(headers)
             php.request(headers, function(err, request) {
               if (err) return reject(err)
               const errors = []
