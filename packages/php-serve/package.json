@@ -1,5 +1,5 @@
 {
-  "name": "php-serve",
+  "name": "@codeurs/php-serve",
   "version": "0.0.1-alpha.0",
   "main": "index.js",
   "repository": "https://github.com/codeurs/php-static",
@@ -17,7 +17,6 @@
     "yargs": "^12.0.2"
   },
   "optionalDependencies": {
-    "php-bin-linux64": "^0.0.1-alpha.0",
-    "php-bin-windows64": "^0.0.1-alpha.0"
+    "@codeurs/php-bin": "^0.0.1-alpha.0"
   }
 }
