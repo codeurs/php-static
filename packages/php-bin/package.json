@@ -1,0 +1,10 @@
+{
+  "name": "php-bin",
+  "version": "0.0.0",
+  "repository": "https://github.com/codeurs/php-static",
+  "license": "MIT",
+  "optionalDependencies": {
+    "php-static-windows64": "=0.0.0",
+    "php-static-linux64": "=0.0.0"
+  }
+}

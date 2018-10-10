@@ -1,9 +1,0 @@
-{
-  "name": "php-static-window64",
-  "version": "0.0.0",
-  "os" : ["win32"],
-  "bin": {
-    "php" : "./php.exe",
-    "php-cgi" : "./php-cgi.exe"
-  }
-}

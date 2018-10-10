@@ -1,0 +1,20 @@
+{
+  "name": "php-static",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/codeurs/php-static",
+  "author": "Ben Merckx <ben@codeurs.be>",
+  "license": "MIT",
+  "bin": "cli.js",
+  "scripts": {
+    "cli": "node cli.js"
+  },
+  "dependencies": {
+    "php-bin": "=0.0.0",
+    "fastcgi-client": "codeurs/node-fastcgi-client",
+    "http-parser-js": "^0.4.13",
+    "node-cleanup": "^2.1.2",
+    "serve-static": "^1.13.2",
+    "spawn-local-bin": "^0.1.4"
+  }
+}
