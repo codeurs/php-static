@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 
-const phpStatic = require('.')
-const args = process.argv
-const [host, dir] = args.slice(2)
+const yargs = require('yargs')
+const phpServe = require('.')
 
-phpStatic(host, dir)
+const {port = 80, host = '127.0.0.1', _ = ['.']} = yargs
+  .usage('Usage: $0 -p 80 -h 127.0.0.1 .')
+  .alias('p', 'port')
+  .alias('h', 'host')
+  .demandCommand(1)
+  .argv
+
+  phpServe(host, port, _[0])

@@ -4,7 +4,7 @@
   "repository": "https://github.com/codeurs/php-static",
   "license": "MIT",
   "optionalDependencies": {
-    "php-static-windows64": "=0.0.0",
-    "php-static-linux64": "=0.0.0"
+    "php-bin-windows64": "=0.0.0",
+    "php-bin-linux64": "=0.0.0"
   }
 }

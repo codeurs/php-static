@@ -13,15 +13,13 @@ const impl = isWindows ? 'php-static-window64' : 'php-static-linux64'
 const fpmRoot = path.resolve(path.join(__dirname, '..', impl))
 const ini = path.join(fpmRoot, 'php.ini')
 
-module.exports = function(host, dir) {
-  const params = host.split(':')
-  const hostname = params.length > 1 ? params[0] : null
-  const port = params.length > 1 ? params[1] : params[0]
+module.exports = function(host, port, dir) {
   const root = dir ? path.resolve(dir) : process.cwd()
+  console.log(root)
   const connection = isWindows
     ? {host: '127.0.0.1', port: FPM_PORT}
     : {sockFile: './php-fpm.sock'}
-
+  
   const fpm = spawn(
     cmd,
     isWindows
@@ -49,5 +47,5 @@ module.exports = function(host, dir) {
     else serve(req, res, () => handler(req, res))
   })
 
-  server.listen(port, hostname)
+  server.listen(port, host)
 }

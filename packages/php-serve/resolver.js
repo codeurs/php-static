@@ -15,11 +15,12 @@ module.exports = async function(root, url) {
 
   const dir = path.resolve(root)
   const pathname = url.split('?')[0]
-  const dirs = pathname.split('/')
   const found = fileExistsInRoot.bind(null, dir)
 
   if (pathname.substr(-4).toLowerCase() === '.php')
     if (await found(pathname)) return pathname
+
+  const dirs = pathname.split('/')
 
   do {
     const index = path.join(...dirs.concat('index.php'))

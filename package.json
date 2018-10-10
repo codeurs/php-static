@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "php-serve": "cd packages/php-serve && yarn cli"
+  },
   "devDependencies": {
     "lerna": "^3.4.0"
   }

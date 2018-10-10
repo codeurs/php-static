@@ -1,5 +1,5 @@
 {
-  "name": "php-static-windows64",
+  "name": "php-bin-windows64",
   "version": "0.0.0",
   "os" : ["win32"],
   "bin": {
