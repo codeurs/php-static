@@ -1,0 +1,3 @@
+*.js -lf
+*.json -lf
+*.txt -lf
