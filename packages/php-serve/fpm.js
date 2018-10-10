@@ -19,12 +19,12 @@ const formatHeader = header =>
     .join('_')
 
 const getHeaders = (req, root, location) => {
-  const script = path.posix.join(root, location)
+  const script = path.join(path.resolve(root), location)
   const headers = {}
   for (const header in req.headers)
     headers['HTTP_' + formatHeader(header)] = req.headers[header]
   const document = req.url.split('?')[0]
-  const scriptName = script.substr(path.posix.resolve(root).length)
+  const scriptName = '/' + path.posix.join(...location.split(path.sep))
   return cleanObj({
     REQUEST_METHOD: req.method,
     CONTENT_TYPE: req.headers['content-type'],
@@ -43,7 +43,6 @@ const getHeaders = (req, root, location) => {
     SERVER_NAME: req.connection.domain,
     SERVER_PROTOCOL: 'HTTP/1.1',
     GATEWAY_INTERFACE: 'CGI/1.1',
-    SERVER_SOFTWARE: 'php-fpm for Node',
     REDIRECT_STATUS: 200,
     ...headers
   })
@@ -65,6 +64,7 @@ module.exports = function(options, resolver) {
         ([script, php]) =>
           new Promise(function(resolve, reject) {
             const headers = getHeaders(req, options.documentRoot, script)
+            console.log(headers)
             php.request(headers, function(err, request) {
               if (err) return reject(err)
               const errors = []
