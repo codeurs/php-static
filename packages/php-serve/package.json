@@ -1,9 +1,9 @@
 {
   "name": "@codeurs/php-serve",
-  "version": "0.0.1-alpha.0",
-  "main": "index.js",
-  "repository": "https://github.com/codeurs/php-static",
   "author": "Ben Merckx <ben@codeurs.be>",
+  "version": "0.0.1-alpha.0",
+  "repository": "https://github.com/codeurs/php-static",
+  "main": "index.js",
   "license": "MIT",
   "bin": "cli.js",
   "scripts": {
@@ -18,5 +18,8 @@
   },
   "optionalDependencies": {
     "@codeurs/php-bin": "^0.0.1-alpha.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

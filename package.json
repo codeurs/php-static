@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "php-serve": "cd packages/php-serve && yarn cli"
+    "php-serve": "cd packages/php-serve && yarn cli",
+    "npm-publish": "lerna publish"
   },
   "devDependencies": {
     "lerna": "^3.4.0"

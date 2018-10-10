@@ -1,11 +1,16 @@
 {
   "name": "@codeurs/php-bin-windows64",
+  "author": "Ben Merckx <ben@codeurs.be>",
   "version": "0.0.1-alpha.0",
+  "repository": "https://github.com/codeurs/php-static",
   "os": [
     "win32"
   ],
   "bin": {
     "php": "./php.exe",
     "php-cgi": "./php-cgi.exe"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
