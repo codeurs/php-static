@@ -1,7 +1,7 @@
 {
   "name": "@codeurs/php-serve",
   "author": "Ben Merckx <ben@codeurs.be>",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "repository": "https://github.com/codeurs/php-static",
   "main": "index.js",
   "license": "MIT",
