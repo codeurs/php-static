@@ -1,6 +1,6 @@
 {
   "name": "php-serve",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "main": "index.js",
   "repository": "https://github.com/codeurs/php-static",
   "author": "Ben Merckx <ben@codeurs.be>",
@@ -17,7 +17,7 @@
     "yargs": "^12.0.2"
   },
   "optionalDependencies": {
-    "php-bin-windows64": "=0.0.0",
-    "php-bin-linux64": "=0.0.0"
+    "php-bin-linux64": "^0.0.1-alpha.0",
+    "php-bin-windows64": "^0.0.1-alpha.0"
   }
 }

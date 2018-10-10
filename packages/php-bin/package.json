@@ -1,10 +1,10 @@
 {
   "name": "php-bin",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "repository": "https://github.com/codeurs/php-static",
   "license": "MIT",
   "optionalDependencies": {
-    "php-bin-windows64": "=0.0.0",
-    "php-bin-linux64": "=0.0.0"
+    "php-bin-linux64": "^0.0.1-alpha.0",
+    "php-bin-windows64": "^0.0.1-alpha.0"
   }
 }
