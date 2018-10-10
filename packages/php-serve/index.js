@@ -9,13 +9,12 @@ const cleanup = require('node-cleanup')
 const FPM_PORT = 9050
 const isWindows = process.platform === 'win32'
 const cmd = isWindows ? 'php-cgi.cmd' : 'php-fpm'
-const impl = isWindows ? 'php-static-window64' : 'php-static-linux64'
+const impl = isWindows ? 'php-bin-window64' : 'php-bin-linux64'
 const fpmRoot = path.resolve(path.join(__dirname, '..', impl))
 const ini = path.join(fpmRoot, 'php.ini')
 
 module.exports = function(host, port, dir) {
   const root = dir ? path.resolve(dir) : process.cwd()
-  console.log(root)
   const connection = isWindows
     ? {host: '127.0.0.1', port: FPM_PORT}
     : {sockFile: './php-fpm.sock'}
