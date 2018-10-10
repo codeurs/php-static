@@ -1,12 +1,12 @@
 {
   "name": "@codeurs/php-bin",
   "author": "Ben Merckx <ben@codeurs.be>",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "repository": "https://github.com/codeurs/php-static",
   "license": "MIT",
   "optionalDependencies": {
-    "@codeurs/php-bin-linux64": "^0.0.1-alpha.0",
-    "@codeurs/php-bin-windows64": "^0.0.1-alpha.0"
+    "@codeurs/php-bin-linux64": "^0.0.1-alpha.1",
+    "@codeurs/php-bin-windows64": "^0.0.1-alpha.1"
   },
   "publishConfig": {
     "access": "public"
