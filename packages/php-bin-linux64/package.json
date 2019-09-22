@@ -1,7 +1,7 @@
 {
   "name": "@codeurs/php-bin-linux64",
   "author": "Ben Merckx <ben@codeurs.be>",
-  "version": "0.0.2",
+  "version": "7.3.8",
   "repository": "https://github.com/codeurs/php-static",
   "os": [
     "darwin",
