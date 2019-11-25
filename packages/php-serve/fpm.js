@@ -24,7 +24,8 @@ const getHeaders = (req, root, location) => {
   for (const header in req.headers)
     headers['HTTP_' + formatHeader(header)] = req.headers[header]
   const document = req.url.split('?')[0]
-  const scriptName = '/' + path.posix.join(...location.split(path.sep))
+  let scriptName = path.posix.join(...location.split(path.sep))
+  if (scriptName[0] !== '/') scriptName = '/' + scriptName
   return cleanObj({
     REQUEST_METHOD: req.method,
     CONTENT_TYPE: req.headers['content-type'],

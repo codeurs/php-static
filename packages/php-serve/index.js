@@ -9,8 +9,8 @@ const cleanup = require('node-cleanup')
 const FPM_PORT = 9050
 const isWindows = process.platform === 'win32'
 const cmd = isWindows ? 'php-cgi.cmd' : 'php-fpm'
-const impl = isWindows ? 'php-bin-windows64' : 'php-bin-linux64'
-const fpmRoot = path.resolve(path.join(__dirname, '..', impl))
+const impl = isWindows ? '@codeurs/php-bin-windows64' : '@codeurs/php-bin-linux64'
+const fpmRoot = path.dirname(path.resolve(require.resolve(impl + '/package.json')))
 const ini = path.join(fpmRoot, 'php.ini')
 
 module.exports = function(host, port, dir) {
@@ -42,7 +42,8 @@ module.exports = function(host, port, dir) {
   const handler = (req, res) => php(req, res, err => notFound(res, err))
 
   const server = http.createServer(function(req, res) {
-    if (req.url.match(/\.php(\?.*)?$/)) handler(req, res)
+    const pathname = req.url.split('?')[0]
+    if (pathname.endsWith('.php')) handler(req, res)
     else serve(req, res, () => handler(req, res))
   })
 
