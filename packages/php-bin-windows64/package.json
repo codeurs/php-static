@@ -1,7 +1,7 @@
 {
   "name": "@codeurs/php-bin-windows64",
   "author": "Ben Merckx <ben@codeurs.be>",
-  "version": "7.3.9",
+  "version": "7.3.9-blackfire",
   "repository": "https://github.com/codeurs/php-static",
   "os": [
     "win32"
