@@ -24,7 +24,14 @@ module.exports = function(host, port, dir) {
     isWindows
       ? ['-b', `127.0.0.1:${FPM_PORT}`, '-c', ini]
       : ['-p', '.', '-F', '-y', path.join(fpmRoot, 'php-fpm.conf')],
-    {stdio: 'inherit'}
+    {
+      stdio: 'inherit',
+      env: {
+        PHP_FCGI_MAX_REQUESTS: 0,
+        PHP_FCGI_CHILDREN: 5,
+        ...process.env
+      }
+    }
   )
 
   cleanup(() => fpm.kill())
