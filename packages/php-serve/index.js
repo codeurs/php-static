@@ -17,13 +17,13 @@ module.exports = function(host, port, dir) {
   const root = dir ? path.resolve(dir) : process.cwd()
   const connection = isWindows
     ? {host: '127.0.0.1', port: FPM_PORT}
-    : {sockFile: './php-fpm.sock'}
+    : {sockFile: '/tmp/php-fpm.sock'}
   
   const fpm = spawn(
     cmd,
     isWindows
       ? ['-b', `127.0.0.1:${FPM_PORT}`, '-c', ini]
-      : ['-p', '.', '-F', '-y', path.join(fpmRoot, 'php-fpm.conf')],
+      : ['-p', '', '-F', '-y', path.join(fpmRoot, 'php-fpm.conf')],
     {
       stdio: 'inherit',
       env: {
